@@ -1,4 +1,5 @@
 .DS_Store
+.gitmessage.txt
 node_modules
 /dist
 
