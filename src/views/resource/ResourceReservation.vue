@@ -2,7 +2,7 @@
   <div class="resource">
     <div class="page-header">
       <div class="header-content">
-        <h1>예약하기</h1>
+        <h1>자원 관리</h1>
         <p>회의실, 차량 등 공용 자원을 예약하세요.</p>
       </div>
       <div class="header-actions">
