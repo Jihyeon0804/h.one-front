@@ -2,7 +2,7 @@
   <div class="resource-management">
     <div class="page-header">
       <div class="header-content">
-        <h1>자원 관리</h1>
+        <h1>자원 예약 관리</h1>
         <p>회의실, 차량 등 공용 자원을 관리하세요.</p>
       </div>
       <div class="header-actions">
