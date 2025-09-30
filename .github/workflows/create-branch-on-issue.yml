@@ -10,6 +10,11 @@ on:
 jobs:
   create_branch_job:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # 저장소 코드(콘텐츠)에 대한 쓰기 권한 부여
+      issues: write 
+      
     steps:
       # 1. 저장소 코드를 워크플로우 환경으로 가져옵니다.
       - name: Checkout Repository
