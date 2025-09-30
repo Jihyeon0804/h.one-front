@@ -63,8 +63,13 @@
                 <div class="setting-item">
                   <label class="setting-label">연차적용</label>
                   <el-radio-group v-model="calculationSettings.annualLeave">
+<<<<<<< HEAD
                     <el-radio label="기본">기본</el-radio>
                     <el-radio label="연봉제">연봉제</el-radio>
+=======
+                    <el-radio label="기본(10)">기본(10)</el-radio>
+                    <el-radio label="연봉제(15)">연봉제(15)</el-radio>
+>>>>>>> develop
                   </el-radio-group>
                 </div>
 
@@ -100,7 +105,11 @@
                 <!-- 국민연금 비공제연령 -->
                 <div class="setting-item">
                   <label class="setting-label">국민연금 비공제연령</label>
+<<<<<<< HEAD
                   <el-input v-model="calculationSettings.nationalPensionAge" prefix="만" suffix="세" />
+=======
+                  <el-input v-model="calculationSettings.nationalPensionAge" prefix="만" suffix="세" readonly class="is-readonly" />
+>>>>>>> develop
                 </div>
 
                 <!-- 건강보험 자동계산 -->
@@ -492,6 +501,46 @@ export default {
   font-size: 18px;
 }
 
+<<<<<<< HEAD
+=======
+/* 읽기 전용 input 스타일 - is-readonly 클래스 직접 대상 */
+.is-readonly {
+  background-color: #f5f7fa !important;
+  opacity: 0.7 !important;
+}
+
+.is-readonly input {
+  background-color: #f5f7fa !important;
+  color: #909399 !important;
+  cursor: not-allowed !important;
+}
+
+.is-readonly .el-input__wrapper {
+  background-color: #f5f7fa !important;
+  border-color: #e4e7ed !important;
+  cursor: not-allowed !important;
+}
+
+.is-readonly .el-input__inner {
+  background-color: #f5f7fa !important;
+  color: #909399 !important;
+  cursor: not-allowed !important;
+}
+
+.is-readonly .el-input__control {
+  background-color: #f5f7fa !important;
+  color: #909399 !important;
+  cursor: not-allowed !important;
+}
+
+/* 모든 하위 요소에 스타일 적용 */
+.is-readonly * {
+  background-color: #f5f7fa !important;
+  color: #909399 !important;
+  cursor: not-allowed !important;
+}
+
+>>>>>>> develop
 /* 반응형 디자인 */
 @media (max-width: 768px) {
   .calculation-settings .el-row {

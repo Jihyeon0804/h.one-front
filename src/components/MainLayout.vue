@@ -51,12 +51,22 @@
         <el-sub-menu index="payroll">
           <template #title>
             <el-icon><Money /></el-icon>
+<<<<<<< HEAD
             <span>급여 관리</span>
+=======
+            <span>급여</span>
+>>>>>>> develop
           </template>
           <el-sub-menu index="payroll-management">
             <template #title>
               <span>급여 관리</span>
             </template>
+<<<<<<< HEAD
+=======
+            <el-menu-item index="/payroll/item-management">
+              <span>급여 기초 정보</span>
+            </el-menu-item>
+>>>>>>> develop
             <el-menu-item index="/payroll/basic-info">
               <span>급여 기본 정보</span>
             </el-menu-item>
@@ -86,11 +96,14 @@
           </el-sub-menu>
         </el-sub-menu>
         
+<<<<<<< HEAD
         <el-menu-item index="/chat">
           <el-icon><ChatDotRound /></el-icon>
           <span>채팅</span>
         </el-menu-item>
         
+=======
+>>>>>>> develop
         <el-menu-item index="/meeting">
           <el-icon><VideoCamera /></el-icon>
           <span>화상회의</span>
@@ -106,10 +119,25 @@
           <span>게시판</span>
         </el-menu-item>
         
+<<<<<<< HEAD
         <el-menu-item index="/resource">
           <el-icon><Calendar /></el-icon>
           <span>예약</span>
         </el-menu-item>
+=======
+        <el-sub-menu index="resource">
+          <template #title>
+            <el-icon><Calendar /></el-icon>
+            <span>예약</span>
+          </template>
+          <el-menu-item index="/resource/reservation">
+            <span>예약하기</span>
+          </el-menu-item>
+          <el-menu-item index="/resource/management">
+            <span>자원 관리</span>
+          </el-menu-item>
+        </el-sub-menu>
+>>>>>>> develop
         
       </el-menu>
       
@@ -398,9 +426,19 @@
       <div class="calendar-modal">
         <div class="calendar-header">
           <div class="calendar-controls">
+<<<<<<< HEAD
             <el-button @click="prevMonth" :icon="ArrowLeft" circle />
             <h3>{{ currentMonthYear }}</h3>
             <el-button @click="nextMonth" :icon="ArrowRight" circle />
+=======
+            <el-button @click="prevMonth" circle>
+              <el-icon><ArrowLeft /></el-icon>
+            </el-button>
+            <h3>{{ currentMonthYear }}</h3>
+            <el-button @click="nextMonth" circle>
+              <el-icon><ArrowRight /></el-icon>
+            </el-button>
+>>>>>>> develop
           </div>
           <div class="calendar-actions">
             <el-button type="primary" @click="addEvent">
@@ -546,6 +584,10 @@ export default {
       sessionExpiryTime: null,
       sessionTimer: null,
       currentTime: new Date(),
+<<<<<<< HEAD
+=======
+      sessionWarningShown: false, // 세션 경고 표시 여부 추적
+>>>>>>> develop
       expandedDepartments: {
         management: false,
         sales: true
@@ -554,63 +596,99 @@ export default {
         {
           id: 1,
           title: '주간 팀 미팅',
+<<<<<<< HEAD
           date: '2024-09-20',
+=======
+          date: this.formatDateForEvent(new Date()),
+>>>>>>> develop
           type: 'meeting',
           time: '14:00'
         },
         {
           id: 2,
           title: '회의실 예약',
+<<<<<<< HEAD
           date: '2024-09-22',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'reservation',
           time: '10:00'
         },
         {
           id: 3,
           title: '연차 휴가',
+<<<<<<< HEAD
           date: '2024-09-25',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 2 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'vacation',
           time: '09:00'
         },
         {
           id: 4,
           title: '프로젝트 마감',
+<<<<<<< HEAD
           date: '2024-09-30',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'deadline',
           time: '18:00'
         },
         {
           id: 5,
           title: '월간 보고서 회의',
+<<<<<<< HEAD
           date: '2024-09-15',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 4 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'meeting',
           time: '15:00'
         },
         {
           id: 6,
           title: '고객사 미팅',
+<<<<<<< HEAD
           date: '2024-09-18',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 5 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'meeting',
           time: '11:00'
         },
         {
           id: 7,
           title: '법인 차량 예약',
+<<<<<<< HEAD
           date: '2024-09-19',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 6 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'reservation',
           time: '09:00'
         },
         {
           id: 8,
           title: '반차 휴가',
+<<<<<<< HEAD
           date: '2024-09-23',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'vacation',
           time: '14:00'
         },
         {
           id: 9,
           title: '신규 프로젝트 킥오프',
+<<<<<<< HEAD
           date: '2024-09-24',
+=======
+          date: this.formatDateForEvent(new Date(Date.now() + 8 * 24 * 60 * 60 * 1000)),
+>>>>>>> develop
           type: 'meeting',
           time: '10:00'
         },
@@ -717,6 +795,14 @@ export default {
         return path
       }
       
+<<<<<<< HEAD
+=======
+      // 예약 관련 경로인 경우 해당 경로를 반환 (하위 메뉴 활성화)
+      if (path.startsWith('/resource')) {
+        return path
+      }
+      
+>>>>>>> develop
       return path
     },
     openedMenus() {
@@ -727,6 +813,14 @@ export default {
         return ['payroll', 'payroll-management', 'payroll-inquiry']
       }
       
+<<<<<<< HEAD
+=======
+      // 예약 관련 경로인 경우 예약 메뉴를 열어둠
+      if (path.startsWith('/resource')) {
+        return ['resource']
+      }
+      
+>>>>>>> develop
       return []
     },
     currentMonthYear() {
@@ -798,6 +892,10 @@ export default {
         '/employee': '직원 관리',
         '/attendance': '근태 관리',
         '/payroll': '급여 관리',
+<<<<<<< HEAD
+=======
+        '/payroll/item-management': '급여기초정보',
+>>>>>>> develop
         '/payroll/basic-info': '급여 기본 정보',
         '/payroll/calculation': '급여 계산',
         '/payroll/transfer-output': '급여 이체 출력',
@@ -811,7 +909,12 @@ export default {
         '/meeting': '화상회의',
         '/approval': '전자결재',
         '/board': '게시판',
+<<<<<<< HEAD
         '/resource': '예약'
+=======
+        '/resource/reservation': '예약하기',
+        '/resource/management': '자원 관리'
+>>>>>>> develop
       }
       return titles[this.$route.path] || 'H.ONE'
     },
@@ -835,7 +938,19 @@ export default {
       this.showOrgModal = false
       done()
     },
+<<<<<<< HEAD
     openCalendarModal() {
+=======
+    formatDateForEvent(date) {
+      const year = date.getFullYear()
+      const month = String(date.getMonth() + 1).padStart(2, '0')
+      const day = String(date.getDate()).padStart(2, '0')
+      return `${year}-${month}-${day}`
+    },
+    openCalendarModal() {
+      // 캘린더를 열 때마다 현재 달로 리셋
+      this.currentDate = new Date()
+>>>>>>> develop
       this.showCalendarModal = true
     },
     handleCalendarClose(done) {
@@ -901,7 +1016,11 @@ export default {
         
         if (diff <= 0) {
           this.handleSessionExpiry()
+<<<<<<< HEAD
         } else if (diff <= 5 * 60 * 1000 && diff > 4 * 60 * 1000) { // 5분 남았을 때 한 번만 경고
+=======
+        } else if (diff <= 5 * 60 * 1000 && diff > 4 * 60 * 1000 && !this.sessionWarningShown) { // 5분 남았을 때 한 번만 경고
+>>>>>>> develop
           this.showSessionWarning()
         }
       }, 1000)
@@ -913,11 +1032,19 @@ export default {
       this.info('로그인 페이지로 이동합니다.')
     },
     showSessionWarning() {
+<<<<<<< HEAD
+=======
+      this.sessionWarningShown = true // 경고 표시 플래그 설정
+>>>>>>> develop
       this.warning('세션이 곧 만료됩니다. (5분 남음)')
     },
     extendSession() {
       // 세션 연장 (30분 추가)
       this.sessionExpiryTime = new Date(Date.now() + 30 * 60 * 1000)
+<<<<<<< HEAD
+=======
+      this.sessionWarningShown = false // 경고 상태 리셋
+>>>>>>> develop
       this.success('세션이 연장되었습니다.')
     },
     updatePayrollMenuState() {
@@ -1521,7 +1648,11 @@ export default {
 
 .calendar-day.today {
   background: #f0f9ff;
+<<<<<<< HEAD
   border: 2px solid #4f46e5;
+=======
+  border: 2px solid #93c5fd;
+>>>>>>> develop
 }
 
 .calendar-day.has-events {
@@ -1817,5 +1948,20 @@ export default {
 .el-sub-menu[index="payroll"]:has(.el-menu-item.is-active) > .el-sub-menu__title .el-icon {
   color: #4f46e5 !important;
 }
+<<<<<<< HEAD
+=======
+
+/* 예약 하위 메뉴가 활성화된 경우 최상위 예약 메뉴만 활성화 */
+.el-sub-menu[index="resource"]:has(.el-menu-item.is-active) > .el-sub-menu__title {
+  background: #f0f9ff !important;
+  color: #4f46e5 !important;
+  border-right: 3px solid #4f46e5 !important;
+  font-weight: 600 !important;
+}
+
+.el-sub-menu[index="resource"]:has(.el-menu-item.is-active) > .el-sub-menu__title .el-icon {
+  color: #4f46e5 !important;
+}
+>>>>>>> develop
 </style>
 

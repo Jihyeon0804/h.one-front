@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .DS_Store
 .gitmessage.txt
 node_modules
@@ -22,3 +23,6 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+=======
+node_modules
+>>>>>>> develop

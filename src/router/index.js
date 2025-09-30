@@ -5,6 +5,10 @@ import Employee from '../views/Employee.vue'
 import Attendance from '../views/Attendance.vue'
 import Payroll from '../views/Payroll.vue'
 import PayrollBasicInfo from '../views/payroll/PayrollBasicInfo.vue'
+<<<<<<< HEAD
+=======
+import PayrollItemManagement from '../views/payroll/PayrollItemManagement.vue'
+>>>>>>> develop
 import PayrollCalculation from '../views/payroll/PayrollCalculation.vue'
 import PayrollTransferOutput from '../views/payroll/PayrollTransferOutput.vue'
 import PayrollStatementOutput from '../views/payroll/PayrollStatementOutput.vue'
@@ -17,7 +21,13 @@ import Chat from '../views/Chat.vue'
 import Meeting from '../views/Meeting.vue'
 import Approval from '../views/Approval.vue'
 import Board from '../views/Board.vue'
+<<<<<<< HEAD
 import Resource from '../views/Resource.vue'
+=======
+import ResourceReservation from '../views/resource/ResourceReservation.vue'
+import ResourceManagement from '../views/resource/ResourceManagement.vue'
+import Landing from '../views/Landing.vue'
+>>>>>>> develop
 
 const routes = [
   {
@@ -51,6 +61,14 @@ const routes = [
     component: PayrollBasicInfo
   },
   {
+<<<<<<< HEAD
+=======
+    path: '/payroll/item-management',
+    name: 'PayrollItemManagement',
+    component: PayrollItemManagement
+  },
+  {
+>>>>>>> develop
     path: '/payroll/calculation',
     name: 'PayrollCalculation',
     component: PayrollCalculation
@@ -111,9 +129,25 @@ const routes = [
     component: Board
   },
   {
+<<<<<<< HEAD
     path: '/resource',
     name: 'Resource',
     component: Resource
+=======
+    path: '/resource/reservation',
+    name: 'ResourceReservation',
+    component: ResourceReservation
+  },
+  {
+    path: '/resource/management',
+    name: 'ResourceManagement',
+    component: ResourceManagement
+  },
+  {
+    path: '/landing',
+    name: 'Landing',
+    component: Landing
+>>>>>>> develop
   }
 ]
 

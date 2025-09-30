@@ -269,14 +269,11 @@ import {
   QuestionFilled, 
   Folder, 
   Search, 
-  Delete, 
-  Like, 
+  Delete,
   Share, 
   UploadFilled,
   Star,
   StarFilled,
-  Heart,
-  HeartFilled
 } from '@element-plus/icons-vue'
 
 export default {
@@ -294,13 +291,19 @@ export default {
     Folder,
     Search,
     Delete,
+<<<<<<< HEAD
     Like,
+=======
+>>>>>>> develop
     Share,
     UploadFilled,
     Star,
     StarFilled,
+<<<<<<< HEAD
     Heart,
     HeartFilled
+=======
+>>>>>>> develop
   },
   setup() {
     const { success, error, warning, info } = useSnackbar()
